@@ -1,6 +1,7 @@
 <?php
 include "addition/database_connection.php";
 if($_SERVER['REQUEST_METHOD'] == "POST"){
+    $role = $_POST['role'];
     $first_name = $_POST['first_name'];
     $middle_name = $_POST['middle_name'];
     $last_name = $_POST['last_name'];
@@ -8,7 +9,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $email = $_POST['email'];
     $phone_number = $_POST['phone_number'];
     $age = $_POST['age'];
-    $role = $_POST['role'];
     $gender = $_POST['gender'];
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
@@ -82,8 +82,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                 </tr>
                 <tr>
                     <td align="center">login Role :-</td>
-                    <td><ul><li><input type="radio" name="role" value="principle" required>Principle</li>
-                    <li><input type="radio" name="role" value="teacher" required>Teacher</li>
+                    <!-- <li><input type="radio" name="role" value="principle" required>Principle</li> -->
+                    <td><ul><li><input type="radio" name="role" value="teacher" required>Teacher</li>
                     <li><input type="radio" name="role" value="student" required>Student</li></ul></td>
                 </tr>
                 <tr>

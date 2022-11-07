@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     }
     ?>
     <div class="container mt-4" align="center">
-        <h1 align="center">Welcome to Login page :</h1><hr><br>
+        <h1 align="center"> Login page </h1><hr><br>
         <form action="login.php" method="post">
             <legend>Personal detail :</legend><br><br>
                     <label for="username" class="form-label">User name</label>
@@ -49,8 +49,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
                     <input type="password" name="password" id="password" required><br><br>
                 
             <button type="reset" class="btn btn-primary">reset</button>
-            <button type="submit" class="btn btn-primary">LOGIN</button><br>
-            <p>Are you not register yet?Please- <a href="registration.php">Register Here</a>.</p>
+            <button type="submit" class="btn btn-primary">LOGIN</button><br><br>
+            <p>Are you not register yet?Please-<a href="registration.php">Register Here</a>.</p>
         </form>
     </div>
 </body>

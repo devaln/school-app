@@ -1,20 +1,20 @@
 <?php
 include "addition/database_connection.php";
 require "addition/auth.php";
-
-    
+if(isset($_POST['username'])){
+    $role = $_POST['role'];
+}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome-Index page</title>
+    <title>Student view page</title>
 </head>
 <body>
-<?php require"addition/navgation.html"; ?>
+<?php require "addition/navgation.html"; ?>
     <div class="container mt-4" align="center">
         <h1>Welcome <?php echo $_SESSION['username']; ?></h1><hr><br>
         <table class="table" border="5px">
@@ -27,15 +27,16 @@ require "addition/auth.php";
                     <th>Gender</th>
                     <th>E-mail</th>
                     <th>Phone Number</th>
-                    <th>loggedin By</th>
+                    <th>loggedin Type</th>
                 </tr>
             </thead>
             <?php 
             $count=1;
-            $sql = "select * from user ";
+            $sql = "select * from user where role = 'student'";
             $result = mysqli_query($conn, $sql);
             if(mysqli_num_rows($result)){
                 while($row = mysqli_fetch_assoc($result)){
+            
             ?>
             <tbody align="center">
                 <tr>
@@ -47,6 +48,7 @@ require "addition/auth.php";
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['phone_number']; ?></td>
                     <td><?php echo $row['role']; ?></td>
+                <td><a class="btn btn-secondary" href="update.php?id=<?php echo $row['id']; ?>">Edit</a><b> || </b><a class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></button></td>
                 </tr>
                 <?php $count++; } ?>
             </tbody>
