@@ -40,9 +40,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <title> REGISTRATION- </title>
 </head>
 <body>
-<?php require"addition/navgation.html"; ?>
-    <div class="container mt-4" align="center">
-        <h1 align="center">Welcome to Registration page :</h1><hr><br>
+<?php require"addition/navgation.php"; ?>
+    <div class="container mt-2" align="center">
+        <h1 align="center">Welcome to Registration page :</h1><hr>
         <form action="registration.php" method="post">
             <legend>Please Fill Your Personal Details To Move Further :</legend><br>
             <table>

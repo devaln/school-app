@@ -10,7 +10,7 @@ require "addition/auth.php";
     <title>Document</title>
 </head>
 <body>
-<?php require"addition/navgation.html"; ?>
+<?php require"addition/navgation.php"; ?>
 <div class="container mt-4"align="center">
 <h1><strong>Welcome <?php echo  $_SESSION['username']; ?></strong></h1>
 <!-- <p><a href="login.php">login for Principle</a></p>

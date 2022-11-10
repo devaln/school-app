@@ -38,12 +38,12 @@
                 $sql = "UPDATE user SET first_name='$first_name', middle_name='$middle_name', last_name='$last_name', phone_number='$phone_number', email='$email', gender='$gender' WHERE id='$id'";
                 $result2 = mysqli_query($conn, $sql);
                 if($result2==1){
-                $alert = " Record Is Updated Successfully.</br></br><a href='view2.php'>View Updated Record</a>";
+                $alert = " Record Is Updated Successfully.</br></br><a href='student_view.php'>View Updated Record</a>";
                 echo '<p style="color:red;">'. $alert .' </p>'; }
             }
             else{
             ?>
-                <form action="update.php" method="post">
+                <form action="student_update.php" method="post">
                     <strong>Update Personel information : </strong><br>
                     <input type="hidden" name="new" value="1" />
                     <input type = "hidden" value = "<?php echo $row['id']; ?>" name = "id" id="id" ><br><br>
@@ -72,7 +72,7 @@
                 
                 <button type="reset"class="btn btn-primary">Reset</button>
                 <button type="submit"class="btn btn-primary">Update</button>
-            <p><a href="view2.php">Click Here</a> to go back.</p>
+            <p><a href="student_view.php">Click Here</a> to go back.</p>
         </form>
         <?php } ?>
     </div>

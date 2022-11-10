@@ -24,13 +24,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - </title>
+    <title>Student - insert records </title>
 </head>
 <body>
-<?php require "addition/navgation.html"; ?>
+<?php require "addition/navgation.php"; ?>
     <div class="container" align="center">
         <h1>Enter the requied details</h1><hr><br>
-        <form action="create.php" method="post">
+        <form action="student_create.php" method="post">
             <legend>Personal Detail :</legend><br>
             <table>
                 <tr>
@@ -51,7 +51,7 @@
             <input type="reset" value="Reset">
             <input type="submit" class="submit" name="insert"></input><br>
         </form>
-        <a href="view2.php" class="form">view newly inserted record</a>
+        <a href="student_view.php" class="form">view newly inserted record</a>
     </div>
 </body>
 </html>

@@ -14,15 +14,15 @@ if(isset($_POST['username'])){
     <title>Student view page</title>
 </head>
 <body>
-<?php require "addition/navgation.html"; ?>
+<?php require "addition/navgation.php"; ?>
     <div class="container mt-4" align="center">
         <h1>Welcome <?php echo $_SESSION['username']; ?></h1><hr><br>
         <table class="table" border="5px">
             <thead align="center">
                 <tr>
                     <th>Sr.No.</th>
-                    <th>Full Name</th>
-                    <th>Username</th>
+                    <th>subject Name</th>
+                    <th>Incharge</th>
                     <th>Age</th>
                     <th>Gender</th>
                     <th>E-mail</th>
@@ -32,7 +32,7 @@ if(isset($_POST['username'])){
             </thead>
             <?php 
             $count=1;
-            $sql = "select * from user where role = 'student'";
+            $sql = "select * from subject";
             $result = mysqli_query($conn, $sql);
             if(mysqli_num_rows($result)){
                 while($row = mysqli_fetch_assoc($result)){
@@ -48,7 +48,7 @@ if(isset($_POST['username'])){
                     <td><?php echo $row['email']; ?></td>
                     <td><?php echo $row['phone_number']; ?></td>
                     <td><?php echo $row['role']; ?></td>
-                <td><a class="btn btn-secondary" href="update.php?id=<?php echo $row['id']; ?>">Edit</a><b> || </b><a class="btn btn-danger" href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></button></td>
+                <td><a class="btn btn-secondary" href="subject_update.php?id=<?php echo $row['id']; ?>">Edit</a><b> || </b><a class="btn btn-danger" href="subject_delete.php?id=<?php echo $row['id']; ?>">Delete</a></button></td>
                 </tr>
                 <?php $count++; } ?>
             </tbody>

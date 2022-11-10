@@ -28,7 +28,7 @@ if(mysqli_num_rows($result)){
     <title>Document</title>
 </head>
 <body>
-<?php require"addition/navgation.html"; ?>
+<?php require"addition/navgation.php"; ?>
     <div class="container mt-4" align="center">
         <h1 align="center">Welcome to Registration page :</h1><hr><br>
         <form action="registration.php" method="post">

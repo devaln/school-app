@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     <title> LOGIN- </title>
 </head>
 <body>
-    <?php require"addition/navgation.html"; ?>
+    <?php require"addition/navgation.php"; ?>
     <?php
     if($alert){
         echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
