@@ -48,7 +48,7 @@ else{
             <a class="nav-link active" aria-current="page" href="/school-app/student_view.php">Student</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/school-app/teacher_view.php">Techer</a>
+            <a class="nav-link active" aria-current="page" href="/school-app/teacher_view.php">Teacher</a>
           </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Action</a>
@@ -56,6 +56,7 @@ else{
               if($loggedin){
                 echo '<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="/school-app/view.php">Veiw inserted records</a></li>
+                  <li><a class="dropdown-item" href="/school-app/file_upload.php">image upload</a></li>
                   <li><a class="dropdown-item" href="/school-app/insert.php">Insert new record</a></li>';
                   
                   if(!$role){

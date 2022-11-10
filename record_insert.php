@@ -15,11 +15,12 @@ for($a = 0; $a < 1000; $a++){
     $role = $faker->randomElement(['student', 'teacher']);
     $gender = $faker->randomElement(['male', 'female', 'other']);
     $username = $faker->unique()->text(11);
-    $phone_number = $faker->phonenumber;
+    $phone_number = 9876543210;
     $age = $faker->numberbetween(11, 65);
     $password = 123456;
     
-    $new_record = mysqli_query($conn, "INSERT into user (role, first_name, middle_name, last_name, username, email, phone_number, age, gender, password) values ('$role','$first_name', ' $middle_name', '$last_name', '$username', '$email', '$phone_number', '$age', '$gender', '$password')");
+    $sql = "INSERT into user (role, first_name, middle_name, last_name, username, email, phone_number, age, gender, password) values ('$role','$first_name', ' $middle_name', '$last_name', '$username', '$email', '$phone_number', '$age', '$gender', '$password')";
+    $new_record = mysqli_query($conn, $sql);
 }
 
 ?>
